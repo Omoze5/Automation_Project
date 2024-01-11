@@ -1,0 +1,91 @@
+body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      overflow: visible;
+}
+
+video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+}
+
+myForm {
+    display: none;
+}
+
+h1 {
+    text-align: center;
+    color: yellow;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    
+}
+h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(103, 103, 7);
+    font-weight: bold;
+
+}
+
+label {
+    color: yellow;
+    margin-left: 1%;
+    font-weight: bold;
+}
+
+#submit {
+    margin-left: 1%;
+}
+
+p {
+    color: black;
+    font-size: medium;
+    font-weight: bolder;
+    text-transform: uppercase;
+    margin-left: 1%;
+    background-color: None;
+    margin-right: 75%;
+    padding: 1%;
+}
+
+div{
+    margin-left: 43%;
+    margin-right: 40%;
+    background-color: #fff;
+    padding: 8px 16px;
+    padding-bottom: 22px;
+
+
+}
+
+
+button {
+    font-size: 16px;
+    border: 2px solid #333;
+    color: black;
+    background-color: rgb(219, 219, 193);
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 50px;
+
+}
+
+button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+

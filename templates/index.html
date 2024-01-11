@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" href="{{ url_for('static', filename= 'css/index.css') }}">
+        
+        <!--<img src="{{ url_for('static', filename= 'Accounting.jpg') }}">-->
+        <video autoplay muted loop>
+            <source src="{{ url_for('static',filename ='account.mp4') }}">
+        </video>
+        
+    </head>
+    <body>
+        <h1>WELCOME TO DELUMINARY AUTOMATION SOFTWARE FOR SALES AND INVENTORY</h1>
+        <div>
+            <h2>Daily Business Tasks</h2>
+            <a href="/showform"><button type="button">Calculate Total Sales</button></a><br><br>
+            <a href="/showform1"><button type="button">Calculate Wokers Salary</button></a><br><br>
+            <a href="/showform2"><button type="button">Calculate Profit</button></a><br><br>
+            <a href="/showform3"><button type="button">Calculate Shift Tips</button></a><br><br>
+            <a href="/showform4"><button type="button">Calculate Total Tips</button></a>
+
+        </div>
+
+
+
+
+
+        {% if show_form %}
+            <form id="myForm", method="post">
+                <label for="input1">Morning_shift Sales:</label>
+                <input type="text" id="input1" name="morning" required><br><br>
+
+                <label for="input1">Evening_shift Sales:</label>
+                <input type="text" id="input1" name="evening" required><br><br>
+
+                <button id= "submit" type="submit">Submit</button>
+                
+            </form>
+             
+            <p> {{ Total_Sale }} </p>
+        {% endif %}
+
+
+        {% if show_form1 %}
+            <form id="myForm", method="post">
+                <label for="input1">Hourly Rate:</label>
+                <input type="number" id="input1" name="rate" required><br><br>
+
+                <label for="input1">Hours worked:</label>
+                <input type="number" id="input1" name="hours" required><br><br>
+
+                <button id= "submit" type="submit">Submit</button>
+                
+            </form>
+             
+            <p> {{ Salary }} </p>
+        {% endif %}
+
+
+
+        {% if show_form2 %}
+            <form id="myForm", method="post">
+                <label for="input1">Total Sales:</label>
+                <input type="text" id="input1" name="sales" required><br><br>
+
+                <label for="input1">Total Cost:</label>
+                <input type="text" id="input1" name="cost" required><br><br>
+
+                <button id= "submit" type="submit">Submit</button>
+                
+            </form>
+             
+            <p> {{ profit }} </p>
+        {% endif %}
+
+
+
+        {% if show_form3 %}
+            <form id="myForm", method="post">
+                <label for="input1">Shift Sales:</label>
+                <input type="text" id="input1" name="shift_sales" required><br><br>
+
+
+                <button id= "submit" type="submit">Submit</button>
+                
+            </form>
+             
+            <p> {{ Tips }} </p>
+        {% endif %}
+
+
+
+        {% if show_form4 %}
+            <form id="myForm", method="post">
+                <label for="input1">Morning Shift Sales:</label>
+                <input type="text" id="input1" name="first_sales" required><br><br>
+
+                <label for="input1">Evening Shift Sales:</label>
+                <input type="text" id="input1" name="second_sales" required><br><br>
+
+
+                <button id= "submit" type="submit">Submit</button>
+                
+            </form>
+             
+            <p> {{ total_Tips }} </p>
+        {% endif %}
+
+
+
+
+
+    </body>
+</html>
